@@ -12,7 +12,7 @@ async function compileScript() {
   );
 
   const compileResult = await compileFunc({
-    targets: ["./contracts/main.fc"],
+    targets: ["./contracts/task.fc"],
     sources: (x) => fs.readFileSync(x).toString("utf8"),
   });
 
@@ -22,7 +22,7 @@ async function compileScript() {
 
   console.log(" - Compilation successful!");
 
-  const hexArtifact = `build/main.compiled.json`;
+  const hexArtifact = `build/task.compiled.json`;
 
   fs.writeFileSync(
     hexArtifact,

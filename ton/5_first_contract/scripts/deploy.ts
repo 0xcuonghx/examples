@@ -9,6 +9,8 @@ import {
 import { hex } from "../build/main.compiled.json";
 import qs from "qs";
 import qrcode from "qrcode-terminal";
+import dotenv from "dotenv";
+dotenv.config();
 
 async function deployScript() {
   console.log(
@@ -36,7 +38,7 @@ async function deployScript() {
   let link =
     `https://tonhub.com/transfer/` +
     address.toString({
-      testOnly: true,
+      testOnly: process.env.TESTNET ? true : false,
     }) +
     "?" +
     qs.stringify({

@@ -14,7 +14,7 @@ async function onchainTestScript() {
   });
 
   const endpoint = await getHttpV4Endpoint({
-    network: "testnet",
+    network: process.env.TESTNET ? "testnet" : "mainnet",
   });
   const client4 = new TonClient4({ endpoint });
 
@@ -29,13 +29,22 @@ async function onchainTestScript() {
   let link =
     `https://tonhub.com/transfer/` +
     address.toString({
-      testOnly: true,
+      testOnly: process.env.TESTNET ? true : false,
     }) +
     "?" +
     qs.stringify({
       text: "Simple test transaction",
       amount: toNano(1).toString(10),
     });
+
+  console.log(
+    `The address of the contract is following: $address. toString()}*
+    );
+    console. log (
+      Please scan the QR code below to deploy the contract to ${
+        process.env.TESTET ? "tesnet" : "mainnet"
+      }:`
+  );
 
   qrcode.generate(link, { small: true }, (code) => {
     console.log(code);
