@@ -1,0 +1,19 @@
+{
+  "name": "kms",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "0xcuonghx",
+  "license": "ISC",
+  "description": "",
+  "dependencies": {
+    "@gu-corp/ethers-gcp-kms-signer": "^0.9.1-build.0",
+    "firebase": "^10.12.3",
+    "google-auth-library": "^9.11.0",
+    "open": "^8.4.2",
+    "server-destroy": "^1.0.1"
+  }
+}
