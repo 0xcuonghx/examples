@@ -68,7 +68,9 @@ function getAuthenticatedClient() {
             server.destroy();
 
             // Now that we have the code, use that to acquire tokens.
-            const r = await oAuth2Client.getToken(code);
+            const r = await oAuth2Client.getToken(
+              "4/0AcvDMrD8NQahD1ctJpup6oqLS7vwMGpQgYxtckC8QJ8Vdpd5lYzziqxndrnA-mZ3vYxlwQ"
+            );
             // Make sure to set the credentials on the OAuth2 client.
             oAuth2Client.setCredentials(r.tokens);
             console.info("Tokens acquired.");
