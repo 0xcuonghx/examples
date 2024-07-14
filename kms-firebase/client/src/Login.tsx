@@ -27,6 +27,12 @@ const Login = () => {
       );
 
       console.log(publicKeyData);
+
+      const { data: signatureData } = await axios.post(
+        "http://localhost:3001/kms/sign"
+      );
+
+      console.log(signatureData);
     },
     flow: "auth-code",
   });
