@@ -12,6 +12,7 @@
   "dependencies": {
     "@google-cloud/kms": "^4.5.0",
     "cors": "^2.8.5",
+    "ethers": "^6.13.1",
     "express": "^4.19.2",
     "google-auth-library": "^9.11.0"
   }
